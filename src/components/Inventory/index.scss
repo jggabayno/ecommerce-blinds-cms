@@ -1,0 +1,65 @@
+@import '../../assets/styles/abstracts/variables';
+
+.inventory {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content min-content;
+  grid-template-areas: 'title title . export' 'search .  . .' 'tabs tabs tabs tabs';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-export {
+  grid-area: export;
+  justify-self: flex-end;
+  }
+
+ 
+  .search {
+    grid-area: search !important;
+  }
+
+  .inventory-tabs {
+    grid-area: tabs;
+  }
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .inventory-column-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+  }
+
+  .manage-stock-link {
+    cursor: pointer;
+    &:hover {
+      color: #1890ff;
+    }
+  }
+
+  .title-export{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.inventory-drawer-actions .ant-form-item-control-input-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

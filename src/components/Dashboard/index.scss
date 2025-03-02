@@ -1,0 +1,219 @@
+@import '../../assets/styles/abstracts/variables';
+
+.dashboard {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'title title . export'
+    'display-date .  . range-date'
+    'total total total total'
+    'monthly-sales monthly-sales order-statuses consumer-with-order-vs '
+    'top-selling-products . . .'
+    ;
+    grid-template-rows: min-content min-content min-content 25rem 14rem;
+    gap: 2rem;
+
+    .title {
+      grid-area: title;
+      font-weight: bold;
+    }
+    
+    .btn-export {
+      grid-area: export;
+    justify-self: flex-end;
+
+
+      background: $dark;
+      border-radius: 10rem;
+      height: 3.2rem;
+      width: 9rem;
+      color: $light;
+      font-weight: 500;
+      border-color: $dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .4rem;
+
+        &:hover {
+            opacity: .9;
+            border-color: $dark;
+        }
+
+        span {
+            font-size: .9rem;
+            line-height: 0;
+        }
+
+        svg {
+            font-size: 1.2rem;
+        }
+    }
+
+    .display-date {
+        grid-area: display-date;
+        align-self: flex-end;
+    }
+
+    .range-date {
+        grid-area: range-date;
+    }
+    
+    .total {
+        grid-area: total;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-rows: 8rem;
+        gap: 2rem;
+
+        position: relative;
+        justify-content: center;
+        
+        .total-item  {
+            border-radius: .4rem;
+            background-color: #fff;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 7px 32px #00000012;
+
+            h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+
+            span {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #a5a5a5;
+            }
+        }
+    }
+
+    .monthly-sales {
+        grid-area: monthly-sales;
+        box-shadow: 0 7px 32px #00000012;
+        padding: 2rem;
+        border-radius: .4rem;
+
+        .monthly-sales-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            h1 {
+                margin-bottom: 0;
+            }
+        }  
+        
+        .recharts-legend-wrapper {
+            text-align: center;
+            .legend-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0 1rem;
+                padding: 1rem 0;
+    
+                > div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0 .4rem;
+                }
+    
+                .legend-theme {
+                    display: inline-block;
+                    width: .8rem;
+                    height: .8rem;
+                    max-width: .8rem;
+                    border-radius: .2rem;
+                }
+    
+                
+            }
+        }
+    }
+
+    .order-statuses {
+        grid-area: order-statuses;
+
+        box-shadow: 0 7px 32px #00000012;
+        padding: 2rem;
+        border-radius: .4rem;
+
+        .order-statuses-body {
+            margin-top: 2rem;
+            > div {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: .4rem 0;
+                font-size: 1rem;
+
+                .count {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .top-selling-products {
+        grid-area: top-selling-products;
+
+        box-shadow: 0 7px 32px #00000012;
+        padding: 2rem;
+        border-radius: .4rem;
+
+        .top-selling-products-body {
+            > div {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: .4rem 0;
+            }
+        }
+    }
+ 
+    .consumer-with-order-vs {
+        grid-area: consumer-with-order-vs;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        box-shadow: 0 7px 32px #00000012;
+        padding: 2rem;
+        border-radius: .4rem;
+        text-align: center;
+
+        .consumer-with-order-vs-body {
+            margin-top: 2rem;           
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2rem;
+            text-align: center;
+
+        .ant-progress {
+       
+            .ant-progress-inner {
+                width: 12rem !important;
+                height: 12rem !important;
+            }
+        }
+
+        .ant-progress-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #6308a0;
+            align-self: flex-end;
+        }
+
+        }
+    }
+ 
+ 
+ 
+}

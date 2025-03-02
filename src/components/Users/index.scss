@@ -1,0 +1,43 @@
+@import '../../assets/styles/abstracts/variables';
+
+.users {
+  display: grid;
+  grid-template-columns: 30% 1fr auto min-content;
+  grid-template-areas: 'title title . print' 'search .  range-date add-user' 'table table table table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-print {
+  grid-area: print;
+  justify-self: flex-end;
+  }
+
+  .btn-add-user {
+    grid-area: add-user;
+  }
+
+  .range-date {
+    grid-area: range-date;
+  }
+
+  .search {
+    grid-area: search !important;
+  }
+
+  .brands-table {
+  grid-area: table;
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+}

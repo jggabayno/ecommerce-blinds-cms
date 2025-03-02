@@ -1,0 +1,57 @@
+@mixin animate($type, $timing) {
+@if $type == fadeIn {
+
+     animation: fadeIn $timing ease-in;
+     @keyframes fadeIn {
+          0% {
+               opacity: 0;
+          } 
+          100% {
+               opacity: 1;
+          }
+          }
+
+} @else {
+
+     animation: fadeInBottom $timing ease-in;  
+     @keyframes fadeInBottom {
+          0% {
+               transform: translateY(50px);
+               opacity: 0;
+          } 
+          100% {
+               transform: translateY(0);
+               opacity: 1;
+          }
+     }
+     
+}
+}
+
+@mixin tableSettings($highlight, $textInherit) {
+     tr:not(.ant-table-placeholder) {
+
+          th:first-child,
+          td:first-child {
+               padding-left: 3.5rem;
+          }
+
+          td:nth-child(#{$highlight}) {
+
+          h5  {
+               font-family: Lato, sans-serif;
+               color: #FE940D;
+               font-weight: bold;
+               font-size: 1rem;
+          }
+
+          span {
+               color: #AFAFAF;
+          }
+          }
+
+          td:nth-child(#{$textInherit}) {
+          text-transform: inherit;
+          }
+     }
+}

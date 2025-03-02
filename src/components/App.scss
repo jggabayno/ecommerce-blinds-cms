@@ -1,0 +1,36 @@
+.qtyInputContainer {
+    width: 7.3rem;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: 2.5rem;
+
+    @media (max-width: 768px) {
+        width: 6.5rem;
+        grid-auto-rows: 2rem;
+    }
+
+    border: 1px solid #E5E8F3;
+    border-radius: 5px;
+    overflow: hidden;
+    .qtyInput {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-left: 1px solid #E5E8F3;
+        border-right: 1px solid #E5E8F3;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #111;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .qtyInputCtrl {
+        cursor: pointer;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+}

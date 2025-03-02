@@ -1,0 +1,52 @@
+@import '../../assets/styles/abstracts/variables';
+
+.product-sizes{
+  display: grid;
+  grid-template-columns: 30% 1fr auto min-content;
+  grid-template-areas: 'title title . print' 'search .  range-date add-product-size' 'table table table table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-print {
+  grid-area: print;
+  justify-self: flex-end;
+  }
+
+  .btn-add-product-size {
+    grid-area: add-product-size;
+  }
+
+  .range-date {
+    grid-area: range-date;
+  }
+
+  .search {
+    grid-area: search !important;
+  }
+
+  .product-size-table {
+  grid-area: table;
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+}
+
+.wxh {
+   .ant-form-item-control-input-content {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+   }
+  
+}

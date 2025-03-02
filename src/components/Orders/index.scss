@@ -1,0 +1,226 @@
+@import '../../assets/styles/abstracts/variables';
+
+.orders {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content auto;
+  grid-template-areas: 'title title . print' 'search .  . range-date' 'table table table table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-print {
+  grid-area: print;
+  justify-self: flex-end;
+  }
+
+  .range-date {
+    grid-area: range-date;
+  }
+
+  .search {
+    grid-area: search !important;
+  }
+
+  .orders-table {
+  grid-area: table;
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+
+}
+
+.order {
+
+  padding-bottom: 7rem !important;
+
+  .order-card {
+ 
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+  .remarks-delivery-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .mode-of-payment-name {
+    padding: 0;
+  }
+
+  .ant-card {
+    margin-bottom: 1rem;
+  }
+
+  .ant-pagination {
+    display: none;
+  }
+
+  .order-form {
+   
+
+    &.order-form-wb {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding-bottom: 4rem;
+      position: relative;
+      button {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+      }
+    }
+    &.order-form-wob {
+    
+    }
+    button {
+      width: 10rem;
+    }
+  }
+ 
+  .btn-print {
+    float: right;
+    margin-right: 2rem;
+   }
+
+}
+
+.order-print-view {
+  padding: 2rem;
+  position: absolute;
+  top: -8888;
+  left: -8888;
+  z-index: -1;
+
+  .order-print-view-header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    // background: green;
+  .logo {
+  background-image: url(../../assets/images/logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  justify-self: flex-end;
+  }
+
+  section {
+
+    h1 {
+      margin-bottom: .2rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: .2rem;
+    }
+  }
+
+  }
+
+  .order-print-view-content {
+    padding: 4rem 1rem 1rem 1rem;
+    // background-color: orange;
+
+    .order-card {
+      // background-color: orange;
+      .ant-card-body {
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+      }
+    }
+
+    .consumer-basic-info {
+      // background-color: orange;
+      .ant-descriptions-item-label {
+        color: #444;
+        font-weight: bold;
+        width: 8.5rem;
+      }
+
+      .ant-descriptions-item-content {
+        text-transform: capitalize;
+        color: #111;
+      }
+    }
+
+    .payments-table {
+      padding-top: 1rem;
+
+      .ant-descriptions-item {
+        padding-bottom: .2rem;
+      }
+      .ant-table-thead > tr > th {
+        background-color:transparent;
+        &::before {
+          display: none;
+        }
+      }
+
+      .ant-descriptions-item-label, .ant-descriptions-item-content {
+        font-size: .7rem;
+      }
+
+      th, td {
+        font-size: .7rem;
+      }
+
+      .ant-table-column-sorter {
+        display: none;
+      }
+
+      .ant-table-footer {
+        padding-top: 2rem;
+        .ant-descriptions {
+          width: 40% !important;
+        }
+      }
+    }
+
+  }
+  
+}
+
+.ant-table-footer {
+  display: flex;
+  justify-content: flex-end;
+  .ant-descriptions {
+    width: 25%;
+    .ant-descriptions-item-label  {
+      width: 10rem;
+     
+    }
+
+    .ant-descriptions-item-content {
+      display: flex !important;
+      justify-content: flex-end;
+      font-weight: bold;
+    }
+
+    .desc-item-highlight {
+      .ant-descriptions-item-content {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

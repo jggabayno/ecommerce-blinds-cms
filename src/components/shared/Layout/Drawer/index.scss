@@ -1,0 +1,18 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.drawer {
+    .ant-drawer-content-wrapper {
+        .ant-drawer-content {
+            // background: green;
+            .ant-drawer-header-title {
+                // background-color: red;
+                display: flex;
+                justify-content: flex-end;
+                
+                svg {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

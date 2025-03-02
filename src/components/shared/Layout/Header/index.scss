@@ -1,0 +1,119 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: $dark;
+    height: 4rem;
+    padding: 0 4rem;
+    box-shadow: 0 2px 8px #00000026;
+
+    @media(max-width: 768px) {
+        padding: 0 2rem;
+    }
+
+    a {
+        color: $light;
+
+        &.logo {
+
+            background-image: url(../../../../assets/images/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+
+            &:hover {
+                color: $light;
+                opacity: .8;
+            } 
+        }
+
+ 
+ 
+    }
+
+    svg, span {
+        color: $light;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.6rem;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        .notif-badge {
+            cursor: pointer;
+            svg {
+                font-size: 1.4rem;
+                
+                &:hover {
+                    color: $light;
+                    opacity: .8;
+                }
+            }
+
+            .ant-badge-count {
+                right: -.1rem;
+                font-size: .7rem;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .user-x-downicon {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+
+        font-weight: 600;
+        cursor: pointer;
+
+        svg {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            opacity: .8;
+        } 
+    }
+
+    .menu {
+        font-size: 1.4rem;
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    
+    .user {
+        margin-left: 2rem;
+        display: flex;
+        gap: 0 .7rem;
+        text-transform: capitalize;
+    }
+
+}
+
+.header-menu-item-notif {
+    .header-menu-item-notif-container {
+        p {
+            margin: 0;
+        }
+    }
+}

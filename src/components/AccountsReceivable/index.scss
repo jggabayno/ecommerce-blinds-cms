@@ -1,0 +1,46 @@
+@import '../../assets/styles/abstracts/variables';
+
+.accounts-receivable {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content auto;
+  grid-template-areas: 'title title . print' 'search .  . range-date' 'table table table table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-print {
+    grid-area: print;
+    justify-self: flex-end;
+  }
+ 
+  .search {
+    grid-area: search !important;
+  }
+
+  .range-date {
+    grid-area: range-date;
+  }
+
+  .accounts-receivable-table {
+    grid-area: table;
+  }
+
+  .consumer-row {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    > div {
+      display: flex;
+      flex-flow: column wrap;
+
+      .consumer-row-name {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

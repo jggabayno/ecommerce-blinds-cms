@@ -1,0 +1,35 @@
+@import '../../assets/styles/abstracts/variables';
+
+.delivery-schedules {
+  // display: grid;
+  // grid-template-columns: 30% 1fr min-content min-content;
+  // grid-template-areas: 'title title . export' 'search .  . add-brand' 'table table table table';
+  // grid-template-rows: min-content min-content min-content;
+  // gap: 2rem;
+
+  // .title {
+  //   grid-area: title;
+  // }
+
+  .events {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .events .ant-badge-status {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .notes-month {
+    font-size: 28px;
+    text-align: center;
+  }
+  .notes-month section {
+    font-size: 28px;
+  }
+     
+
+}

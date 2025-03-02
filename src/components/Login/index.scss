@@ -1,0 +1,49 @@
+@import '../../assets/styles/abstracts/variables';
+
+.login {
+    overflow: hidden;
+
+    .logo {
+        background-image: url(../../assets/images/logo.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 10rem;
+        height: 10rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .login-title {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+    }
+
+    form {
+        width: 22%;
+        margin: calc(100vh - 70vh) auto 0 auto;
+    }
+
+    .btn-login {
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+
+    a {
+        color: $primary;
+    }
+
+    .signup {
+        float: right;
+       
+    }
+
+    .invalid-credential {
+        color: red;
+        font-style: italic;
+        margin-bottom: .5rem;
+        display: block;
+    }
+    
+}

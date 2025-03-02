@@ -1,0 +1,21 @@
+.notifications {
+
+    .ordered-product-avatars-container {
+        background: #f2f2f2;
+        width: 5.5rem;
+        height: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 2rem));
+        gap: .5rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .ant-list-item {
+        cursor: pointer;
+        &:hover {
+            background: #fbfafa;
+        }
+    }
+}
